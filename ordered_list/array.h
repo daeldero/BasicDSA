@@ -5,6 +5,7 @@ template<typename T>
 class Array : IArray<T> {
 public:
 	Array(int capacity = 1);
+	const Array& operator=(const Array& other);
 	~Array();
 
 	int size() const override;
@@ -40,6 +41,16 @@ private:
 template<typename T>
 Array<T>::Array(int capacity) : capacity_{ capacity }, size_{ 0 } {
 	data_ = new T[capacity_];
+}
+
+template<typename T>
+const Array<T>& Array<T>::operator=(const Array<T>& other) {
+	size_ = other.size_;
+	capacity_ = other.capacity_;
+	for (int i = 0; i < size_; ++i) {
+		data_[i] = other.data_[i];
+	}
+	return *this;
 }
 
 template<typename T>
