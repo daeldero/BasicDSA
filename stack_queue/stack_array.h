@@ -18,12 +18,12 @@ public:
 	void Pop() override;
 
 private:
-	List list_;
+	Array<T> list_;
 };
 
 template<typename T, typename List>
 Stack<T, List>::Stack(int capacity) {
-	list_ = List(capacity);
+	list_ = Array<T>(capacity);
 }
 
 template<typename T, typename List>

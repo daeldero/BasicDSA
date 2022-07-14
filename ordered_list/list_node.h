@@ -1,6 +1,6 @@
 #pragma once
 
-template<typename T, bool Double = false>
+template<typename T, bool doubly = false>
 struct Node {
 	Node(const T& data = T()) : data_{ data } {};
 
