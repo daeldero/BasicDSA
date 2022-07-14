@@ -33,13 +33,13 @@ private:
 	void ChangeCapacity();
 
 private:
-	int size_;
+	int size_{ 0 };
 	int capacity_;
 	T* data_;
 };
 
 template<typename T>
-Array<T>::Array(int capacity) : capacity_{ capacity }, size_{ 0 } {
+Array<T>::Array(int capacity) : capacity_{ capacity } {
 	data_ = new T[capacity_];
 }
 

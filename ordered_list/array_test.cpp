@@ -10,6 +10,8 @@ void PrintArray(const Array<int>& arr) {
 }
 
 void TestArray() {
+	std::cout << "Array Test\n";
+
 	Array<int> arr;
 	for (int i = 1; i <= 5; ++i) {
 		arr.PushBack(i);
@@ -26,4 +28,6 @@ void TestArray() {
 		else arr.PopFront();
 		PrintArray(arr);
 	}
+
+	std::cout << "Array Test End\n\n";
 }
